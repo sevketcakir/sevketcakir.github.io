@@ -14,46 +14,114 @@
 <div id="container">
 	<fieldset>
 		<legend>Hesaplama</legend>
+		<table>
 
+
+		<tr>
+		<td>
 		<label for="bastar">Başlangıç Tarihi</label>
-		<input type="text" id="bastar" name="bastar" value=""> <br/>
+		</td>
+		<td>
+		<input type="text" id="bastar" name="bastar" value="">
+		</td>
+		</tr>
+		<tr>
+		<td>
 		<label for="gunsay">Gün sayısı</label>
+	</td>
+	<td>
 		<input type="number" name="gunsay" id="gunsay" value="30"> <br/>
+	</td>
+</tr>
+<tr>
+	<td>
 
 		<label for="tatiller">Tatiller</label>
+	</td>
+	<td>
 		<select class="" name="tatiller" id="tatiller" size="15">
+
 		</select>
-		<br/>
+		</td>
+		<tr>
+			<td colspan="2">
 		<label for="cumartesi">Cumartesi çalışıyor mu?</label>
 		<input type="checkbox" name="cumartesi" id="cumartesi" value="">
-		<br/>
+	</td>
+</tr>
+<tr>
+<td colspan="2">
 		<label for="but">Bütünlemeye girecek mi?</label>
 		<input type="checkbox" name="but" id="but" value="">
-		<br/>
+	</td>
+</tr>
+<tr>
+	<td>
 		<label for="butbas">Bütünleme başlangıç</label>
+	</td>
+	<td>
 		<input type="text" name="butbas" id="butbas" value="2017.06.05">
-		<br/>
+	</td>
+</tr>
+<tr>
+	<td>
 		<label for="butbit">Bütünleme bitiş</label>
+	</td>
+	<td>
 		<input type="text" name="butbit" id="butbit" value="2017.06.18">
-		<br/>
+	</td>
+</tr>
+<tr>
+	<td colspan="2">
 		<label for="yazokulu">Yaz okuluna katılıyor mu?</label>
 		<input type="checkbox" name="yazokulu" id="yazokulu" value="">
-		<br/>
+	</td>
+</tr>
+<tr>
+	<td>
 		<label for="yobas">Yaz okulu başlangıç</label>
+	</td>
+	<td>
 		<input type="text" name="yobas" id="yobas" value="2017.06.19">
-		<br/>
+	</td>
+</tr>
+<tr>
+	<td>
 		<label for="yobit">Yaz okulu bitiş</label>
+	</td>
+	<td>
 		<input type="text" name="yobit" id="yobit" value="2017.08.18">
-		<br/>
+	</td>
+</tr>
+<tr>
+	<td>
 		<label for="donembit">Bahar dönemi bitiş tarihi</label>
+	</td>
+	<td>
 		<input type="text" name="donembit" id="donembit" value="2017.05.26">
-		<br/>
+	</td>
+</tr>
+<tr>
+	<td>
 		<label for="donembas">Güz dönemi bitiş tarihi</label>
+	</td>
+	<td>
 		<input type="text" name="donembas" id="donembas" value="2017.09.15">
-		<br/>
+	</td>
+</tr>
+<tr>
+	<td colspan="2">
 		<input type="button" name="hesapla" id="hesapla" value="Hesapla" onclick="hesapla();">
+	</td>
+</tr>
 
-		<p id="bittar" name="bittar">Bitiş Tarihi: </p>
+	<tr>
+		<td colspan="2">
+			<p id="bittar" name="bittar">Bitiş Tarihi: </p>
+		</td>
+	</tr>
+
+		</table>
 	</fieldset>
 	<div id="StajGunleri" name="StajGunleri">
 
