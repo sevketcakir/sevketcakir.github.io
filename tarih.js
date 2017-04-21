@@ -18,7 +18,7 @@ function tatilGuncelle(){
 	for (var key in Tatil) {
 		//console.log("key " + key + " has value " + myArray[key]);
     var tarih=new Date(key);
-    tarih=tarih.getFullYear()+"."+tarih.getMonth()+"."+tarih.getDate();
+    tarih=tarih.getFullYear()+"."+(tarih.getMonth()+1)+"."+tarih.getDate();
     var option = document.createElement("option");
 		option.value = key;
 		option.text = tarih+" "+Tatil[key];
