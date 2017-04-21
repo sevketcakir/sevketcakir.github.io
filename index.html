@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8">
+	<title>Staj Tarih Hesaplama</title>
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/start/jquery-ui.css" rel="stylesheet">
+	<style>
+.ui-datepicker td.ui-state-disabled>span{background:#c00;color:grey;}
+.ui-datepicker td.ui-state-disabled{opacity:100;}
+	</style>
+</head>
+<body>
+<h2 class="demoHeaders">Staj Tarih Hesaplama</h2>
+<div id="container">
+	<fieldset>
+		<legend>Hesaplama</legend>
+
+		<label for="bastar">Başlangıç Tarihi</label>
+		<input type="text" id="bastar" name="bastar" value=""> <br/>
+		<label for="gunsay">Gün sayısı</label>
+		<input type="number" name="gunsay" id="gunsay" value="30"> <br/>
+
+		<label for="tatiller">Tatiller</label>
+		<select class="" name="tatiller" id="tatiller" size="15">
+		</select>
+		<br/>
+		<label for="cumartesi">Cumartesi çalışıyor mu?</label>
+		<input type="checkbox" name="cumartesi" id="cumartesi" value="">
+		<br/>
+		<label for="but">Bütünlemeye girecek mi?</label>
+		<input type="checkbox" name="but" id="but" value="">
+		<br/>
+		<label for="butbas">Bütünleme başlangıç</label>
+		<input type="text" name="butbas" id="butbas" value="2017.06.05">
+		<br/>
+		<label for="butbit">Bütünleme bitiş</label>
+		<input type="text" name="butbit" id="butbit" value="2017.06.18">
+		<br/>
+		<label for="yazokulu">Yaz okuluna katılıyor mu?</label>
+		<input type="checkbox" name="yazokulu" id="yazokulu" value="">
+		<br/>
+		<label for="yobas">Yaz okulu başlangıç</label>
+		<input type="text" name="yobas" id="yobas" value="2017.06.19">
+		<br/>
+		<label for="yobit">Yaz okulu bitiş</label>
+		<input type="text" name="yobit" id="yobit" value="2017.08.18">
+		<br/>
+		<label for="donembit">Bahar dönemi bitiş tarihi</label>
+		<input type="text" name="donembit" id="donembit" value="2017.05.26">
+		<br/>
+		<label for="donembas">Güz dönemi bitiş tarihi</label>
+		<input type="text" name="donembas" id="donembas" value="2017.09.15">
+		<br/>
+		<input type="button" name="hesapla" id="hesapla" value="Hesapla" onclick="hesapla();">
+
+		<p id="bittar" name="bittar">Bitiş Tarihi: </p>
+	</fieldset>
+	<div id="StajGunleri" name="StajGunleri">
+
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="tarih.js">
+
+</script>
+<script>
+//TODO:aşağıdaki işlevsellik daha sonra kullanılacak...
+//var d=new Date('12.31.2016');
+//document.write(new Date(d.setDate(d.getDate()+1)));
+
+tatilGuncelle();
+datePickerEkle($( "#bastar" ),Tatil);
+datePickerEkle($( "#butbas" ),Tatil);
+datePickerEkle($( "#butbit" ),Tatil);
+datePickerEkle($( "#yobas" ),Tatil);
+datePickerEkle($( "#yobit" ),Tatil);
+datePickerEkle($( "#donembas" ),Tatil);
+datePickerEkle($( "#donembit" ),Tatil);
+//datePickerEkle($( "#bittar" ),Tatil);
+
+
+$.datepicker.setDefaults(
+  $.extend(
+    {'dateFormat':'yy.mm.dd'},
+    $.datepicker.regional['tr']
+  )
+);
+</script>
+
+</body>
+</html>
