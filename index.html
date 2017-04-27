@@ -7,6 +7,7 @@
 	<style>
 .ui-datepicker td.ui-state-disabled>span{background:#c00;color:grey;}
 .ui-datepicker td.ui-state-disabled{opacity:100;}
+.ui-datepicker td.ui-state-highlight>span{background:#0c0;color:black;}
 	</style>
 </head>
 <body>
@@ -139,13 +140,13 @@
 //document.write(new Date(d.setDate(d.getDate()+1)));
 
 tatilGuncelle();
-datePickerEkle($( "#bastar" ),Tatil);
-datePickerEkle($( "#butbas" ),Tatil);
-datePickerEkle($( "#butbit" ),Tatil);
-datePickerEkle($( "#yobas" ),Tatil);
-datePickerEkle($( "#yobit" ),Tatil);
-datePickerEkle($( "#donembas" ),Tatil);
-datePickerEkle($( "#donembit" ),Tatil);
+datePickerEkle($( "#bastar" ),Tatil,{});
+datePickerEkle($( "#butbas" ),Tatil,{});
+datePickerEkle($( "#butbit" ),Tatil,{});
+datePickerEkle($( "#yobas" ),Tatil,{});
+datePickerEkle($( "#yobit" ),Tatil,{});
+datePickerEkle($( "#donembas" ),Tatil,{});
+datePickerEkle($( "#donembit" ),Tatil,{});
 //datePickerEkle($( "#bittar" ),Tatil);
 
 

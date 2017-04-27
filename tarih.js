@@ -78,7 +78,7 @@ function hesapla()
     }
     bastar.setDate(bastar.getDate()-1);
     $("#bittar").html("Bitiş Tarihi: "+bastar.getFullYear()+"."+(bastar.getMonth()+1)+"."+bastar.getDate())
-    datePickerEkle($( "#StajGunleri" ),StajGunleri);
+    datePickerEkle($( "#StajGunleri" ),Tatil,StajGunleri);
     $('#StajGunleri').datepicker("setDate", btcopy );
 }
 
@@ -88,6 +88,17 @@ function datePickerEkle(eleman,tatil,stajgunu)
   eleman.datepicker({
   	//dateFormat: 'dd.mm.yy',
   	beforeShowDay: function(date) {
+			if(stajgunu[date])
+				return [false,'ui-state-highlight',stajgunu[date]]
+			else if(tatil[date])
+				return [false,'',tatil[date]]
+			else if(date.getDay()==0)
+				return [false,'','Pazar'];
+			else {
+				return [true,'',''];
+			}
+
+			/*
   	var Highlight = tatil[date];
   	if (Highlight) {
   		return [false, 'ui-state-highlight', Highlight];
@@ -96,6 +107,7 @@ function datePickerEkle(eleman,tatil,stajgunu)
   		if(date.getDay()==0) return [false,'','Pazar'];
   		return [true, '', ''];
   	}
+		*/
 
   },
   	//dateFormat: "dd.mm.yy",//tarih formatı yy=yıl mm=ay dd=gün
