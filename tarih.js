@@ -6,6 +6,7 @@ Tatil[new Date('05/19/2017')] = 'Atatürk\'ü Anma Gençlik ve Spor Bayramı';
 Tatil[new Date('06/25/2017')] = 'Ramazan Bayramı';
 Tatil[new Date('06/26/2017')] = 'Ramazan Bayramı';
 Tatil[new Date('06/27/2017')] = 'Ramazan Bayramı';
+Tatil[new Date('07/15/2017')] = 'Demokrasi ve Millî Birlik Günü';
 Tatil[new Date('08/30/2017')] = 'Zafer Bayramı';
 Tatil[new Date('09/01/2017')] = 'Kurban Bayramı';
 Tatil[new Date('09/02/2017')] = 'Kurban Bayramı';
