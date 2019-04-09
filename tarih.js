@@ -111,7 +111,7 @@ function datePickerEkle(eleman,tatil,stajgunu)
 		*/
 
   },
-  	//dateFormat: "dd.mm.yy",//tarih formatı yy=yıl mm=ay dd=gün
+  	dateFormat: "yy/mm/dd",//tarih formatı yy=yıl mm=ay dd=gün
   	firstDay:1,
   	appendText: "(yıl-ay-gün)",//inputun sonuna bu yazıyı yazar.
   	/*autoSize: true,//inputu otomatik boyutlandırır*/
